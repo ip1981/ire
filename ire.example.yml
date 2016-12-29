@@ -1,0 +1,15 @@
+# TCP port to listen on (localhost only)
+# Optional. Default is 8080.
+port: 8080
+
+# UNIX socket to listen on.
+# Optional. If specified, `port` is ignored
+# socket: /path
+
+# YOLO configuration. Consult the Darknet.
+# Defaults are yolo.{cfg,names,weights}
+yolo:
+  cfg: yolo.cfg
+  names: yolo.names
+  weights: yolo.weights
+

@@ -1,0 +1,44 @@
+#image {
+  display: block;
+  margin: 0px;
+  max-width: 100%;
+  padding: 0px;
+  position: relative;
+}
+
+#image>img {
+  position: absolute;
+  display: none;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#main {
+  padding: 3em;
+}
+
+.item {
+  border: 3px dashed yellow;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position:absolute;
+  z-index: 2;
+}
+
+.itemLabel {
+  background-color: yellow;
+  color: black;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  opacity: 0.5;
+  padding: 0.1em;
+  position:absolute;
+  z-index: 3;
+}
+.item:hover {
+  border: 5px solid yellow;
+}

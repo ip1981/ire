@@ -1,0 +1,59 @@
+name: ire
+version: 0.0.0
+license: PublicDomain
+license-file: LICENSE
+author: Igor Pashev <pashev.igor@gmail.com>
+maintainer: Igor Pashev <pashev.igor@gmail.com>
+category: Web
+build-type: Simple
+cabal-version: >=1.20
+extra-source-files:
+  README.md
+  ire.example.yml
+
+data-files:
+  static/external/bootstrap/css/*.min.css
+  static/external/bootstrap/js/*.min.js
+  static/external/jquery-2.2.4.min.js
+  static/wire.css
+  static/wire.js
+  webui.html
+
+executable ire
+  hs-source-dirs: src
+  main-is: Main.hs
+  default-language: Haskell2010
+  ghc-options: -Wall -static -threaded
+  extra-libraries: darknet
+
+  other-modules:
+    IRE.Application
+    IRE.Application.YOLO
+    IRE.Config
+    IRE.Logging
+    IRE.Server
+    IRE.YOLO
+
+  build-depends:
+      base >=4.8 && < 50
+    , aeson
+    , array
+    , bytestring
+    , concurrent-extra
+    , docopt
+    , filepath
+    , http-types
+    , interpolatedstring-perl6
+    , mtl
+    , network
+    , scotty >= 0.10
+    , text
+    , unix
+    , unordered-containers
+    , vector
+    , wai
+    , wai-extra
+    , wai-middleware-static >= 0.8
+    , warp >= 3.2
+    , yaml >= 0.8.4
+
