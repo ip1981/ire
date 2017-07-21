@@ -23,6 +23,7 @@ Installation
 
     $ git clone https://github.com/ip1981/ire.git
     $ cd ire
+    $ cabal install --dependencies-only
     $ cabal install --ghc-options="-optl=-Wl,-rpath,$darknet/lib" --extra-include-dirs "$darknet/include" --extra-lib-dirs "$darknet/lib"
 
 
